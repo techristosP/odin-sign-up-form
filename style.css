@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('Poppins-Regular.ttf');
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: #f2f2f2;
+}
+
+#italics {
+    font-style: italic;
+}
+
+.top {
+    /* background-color: whitesmoke; */
+    padding: 20px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.form {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.input_field {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom {
+    padding: 20px
+}
+
+button {
+    background-color: rgb(90, 121, 29);
+    color: white;
+    padding: 10px 40px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
