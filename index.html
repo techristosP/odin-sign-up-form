@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sign-up form</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+
+<head>
+    <title>Sign-up form</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cover">
+        <div class="logo">
+            <img src="odin-lined.png" alt="odin-logo">
+            <span id="fjord">SOGNEFJORD</span>
+        </div>
+    </div>
+    <!-- <img src="fjord.jpeg" alt="fjord" id="fjord"> -->
+    <div class="page">
         <div class="top">
-            <p>This is not a real online service. You know you need something like this in your life to help you realize your deepest dreams. Sign up <span id="italics">now</span> to get started.</p>
+            <p>This is not a real online service. You know you need something like this in your life to help you realize
+                your deepest dreams. Sign up <span id="italics">now</span> to get started.</p>
             <p>You <span id="italics">know</span> you want to.</p>
         </div>
 
@@ -15,40 +26,51 @@
             <form method="post">
                 <legend>Let's do this!</legend>
 
-                <div class="input_field">
-                    <label for="first_name">FIRST NAME</label>
-                    <input type="text" name="first_name" id="first_name">
+                <div class="inputs">
+                    <div class="left">
+                        <div class="input_field">
+                            <label for="first_name">FIRST NAME</label>
+                            <input type="text" name="first_name" id="first_name">
+                        </div>
+
+                        <div class="input_field">
+                            <label for="email">EMAIL</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+
+                        <div class="input_field">
+                            <label for="password">PASSWORD</label>
+                            <input type="password" name="password" id="password">
+                        </div>
+
+                    </div>
+
+                    <div class="right">
+                        <div class="input_field">
+                            <label for="last_name">LAST NAME</label>
+                            <input type="text" namae="last_namae" id="last_namae">
+                        </div>
+
+                        <div class="input_field">
+                            <label for="phone_number">PHONE NUMBER</label>
+                            <input type="tel" name="phone_number" id="phone_number">
+                        </div>
+
+                        <div class="input_field">
+                            <label for="confirm_password">CONFIRM PASSWORD</label>
+                            <input type="password" name="confirm_password" id="confirm_password">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="input_field">
-                    <label for="last_name">LAST NAME</label>
-                    <input type="text" namae="last_namae" id="last_namae">
-                </div>
-
-                <div class="input_field">
-                    <label for="email">EMAIL</label>
-                    <input type="email" name="email" id="email">
-                </div>
-
-                <div class="input_field">
-                    <label for="phone_number">PHONE NUMBER</label>
-                    <input type="tel" name="phone_number" id="phone_number">
-                </div>
-
-                <div class="input_field">
-                    <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password">
-                </div>
-
-                <div class="input_field">
-                    <label for="confirm_password">CONFIRM PASSWORD</label>
-                    <input type="password" name="confirm_password" id="confirm_password">
-                </div>
             </form>
         </div>
 
         <div class="bottom">
             <button type="submit">Create Account</button>
+            <p>Already have an account? <span id="login">Log in</span></p>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

@@ -6,29 +6,83 @@
 body {
     font-family: 'Poppins';
     background-color: #f2f2f2;
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 0;
+}
+/* 
+#fjord {
+    position: left;
+    width: 45vw;
+    height: 100vh;
+} */
+
+.cover {
+    background-image: url(fjord.jpeg);
+    background-position: center;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    width: 45vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
 }
 
-#italics {
-    font-style: italic;
+.logo {
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.page {
+    /* padding-left: 20px;
+    padding-right: 50px; */
 }
 
 .top {
     /* background-color: whitesmoke; */
-    padding: 20px;
+    padding: 100px 250px 50px 20px;
     font-weight: bold;
     font-size: 22px;
 }
 
 .form {
     background-color: white;
-    padding: 20px;
-    display: flex;
+    padding: 20px 250px 50px 20px;
+    /* display: flex; */
+
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 
 legend {
     font-size: 20px;
     font-weight: bold;
+    position: top;
+}
+
+.inputs {
+    display: flex;
+    gap: 20px;
+   
 }
 
 .input_field {
@@ -37,7 +91,7 @@ legend {
 }
 
 .bottom {
-    padding: 20px
+    padding: 20px 250px 50px 20px;
 }
 
 button {
@@ -48,3 +102,15 @@ button {
     border-radius: 8px;
 }
 
+#login {
+    color: rgb(90, 121, 29)
+}
+
+#fjord {
+    color: white;
+    font-size: 50px;
+}
+
+#italics {
+    font-style: italic;
+}
