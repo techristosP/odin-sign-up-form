@@ -5,11 +5,13 @@ function checkPassword() {
     if (password.value != confirmPassword.value || password.value == "") {
         password.style.border = "2px solid red";
         confirmPassword.style.border = "2px solid red";
+        error_msg.classList.add("error");
         error_msg.innerHTML = "*Passwords do not match";
     }
     else {
         password.style.border = "2px solid green";
         confirmPassword.style.border = "2px solid green";
+        error_msg.classList.remove("error");
         error_msg.innerHTML = "";
     }
 
@@ -23,11 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const first_name = document.getElementById("first_name");
     const last_name = document.getElementById("last_name");
     const email = document.getElementById("email");
-    const phone = document.getElementById("phone");
+    const phone = document.getElementById("phone_number");
     const button = document.getElementById("button");
 
     function checkInputs() {
-        if (first_name.value == "" || last_name.value == "" || email.value == "" || phone.value == "" || password.value == "" || confirm_password.value == "") {
+        if (error_msg.classList.contains("error") || first_name.value == "" || last_name.value == "" || email.value == "" || phone.value == "" || password.value == "" || confirm_password.value == "") {
             button.classList.add("disabled");
         }
         else {
@@ -43,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
     confirm_password.addEventListener("input", checkInputs);
 
 
-    form.addEventListener("submit", function (event) {
+    button.addEventListener("click", function (event) {
         event.preventDefault();
         if (button.classList.contains("disabled")) {
             alert("Please fill out all fields correctly");
