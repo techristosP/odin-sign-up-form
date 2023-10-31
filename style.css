@@ -110,6 +110,7 @@ input:valid {
 input:focus {
     border-color: blue;
     outline: none;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 #error_msg {
@@ -121,8 +122,16 @@ input:focus {
     padding: 40px 250px 50px 40px;
 }
 
-button {
+#button {
     background-color: rgb(90, 121, 29);
+    color: white;
+    padding: 10px 40px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+#button.disabled {
+    background-color: rgb(90, 121, 29, 0.5);
     color: white;
     padding: 10px 40px;
     font-size: 18px;

@@ -2,31 +2,55 @@ function checkPassword() {
     let password = document.getElementById("password");
     let confirmPassword = document.getElementById("confirm_password");
     let error_msg = document.getElementById("error_msg");
-    if (password.value != confirmPassword.value) {
+    if (password.value != confirmPassword.value || password.value == "") {
         password.style.border = "2px solid red";
         confirmPassword.style.border = "2px solid red";
         error_msg.innerHTML = "*Passwords do not match";
-        let submitButton = document.getElementById("button");
-        // submitButton.ariaDisabled = true;
     }
     else {
         password.style.border = "2px solid green";
         confirmPassword.style.border = "2px solid green";
         error_msg.innerHTML = "";
     }
- 
+
 }
 
-// function checkInput() {
-//     let password = document.getElementById("password");
-//     let confirmPassword = document.getElementById("confirm_password");
-//     let firstname = document.getElementById("first_tname");
-//     let lastname = document.getElementById("last_name");
-//     let email = document.getElementById("email");
-//     let phone = document.getElementById("phone_number");
-//     if (password.value == "" || confirmPassword.value == "" || firstname.value == "" || lastname.value == "" || email.value == "" || phone.value == "") {
-//         let submitButton = document.getElementById("button");
-//         submitButton.style.backgroundColor = "red";
-//     }
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("inner_form");
+    const confirm_password = document.getElementById("confirm_password");
+    const password = document.getElementById("password");
+    const error_msg = document.getElementById("error_msg");
+    const first_name = document.getElementById("first_name");
+    const last_name = document.getElementById("last_name");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const button = document.getElementById("button");
 
-// }
+    function checkInputs() {
+        if (first_name.value == "" || last_name.value == "" || email.value == "" || phone.value == "" || password.value == "" || confirm_password.value == "") {
+            button.classList.add("disabled");
+        }
+        else {
+            button.classList.remove("disabled");
+        }
+    }
+
+    first_name.addEventListener("input", checkInputs);
+    last_name.addEventListener("input", checkInputs);
+    email.addEventListener("input", checkInputs);
+    phone.addEventListener("input", checkInputs);
+    password.addEventListener("input", checkInputs);
+    confirm_password.addEventListener("input", checkInputs);
+
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (button.classList.contains("disabled")) {
+            alert("Please fill out all fields correctly");
+        }
+        else {
+            alert("Success!");
+        }
+    });
+});
+

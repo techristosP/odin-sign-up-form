@@ -15,7 +15,7 @@
             <span id="fjord">SOGNEFJORD</span>
         </div>
     </div>
-    <!-- <img src="fjord.jpeg" alt="fjord" id="fjord"> -->
+    
     <div class="page">
         <div class="top">
             <p>This is not a real online service. You know you need something like this in your life to help you realize
@@ -24,7 +24,7 @@
         </div>
 
         <div class="form">
-            <form method="post">
+            <form method="post" id="inner_form">
                 <legend>Let's do this!</legend>
 
                 <div class="inputs">
@@ -41,7 +41,7 @@
 
                         <div class="input_field">
                             <label for="password">PASSWORD</label>
-                            <input type="password" name="password" id="password" onchange="checkPassword()" required>
+                            <input type="password" name="password" id="password" onkeyup="checkPassword()" required>
                             <span id="error_msg"></span>
                         </div>
 
@@ -60,7 +60,7 @@
 
                         <div class="input_field">
                             <label for="confirm_password">CONFIRM PASSWORD</label>
-                            <input type="password" name="confirm_password" id="confirm_password" onchange="checkPassword()" required>
+                            <input type="password" name="confirm_password" id="confirm_password" onkeyup="checkPassword()" required>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
         </div>
 
         <div class="bottom">
-            <button type="submit" id="button" onformchange="checkInput()">Create Account</button>
+            <button type="submit" id="button" class="disabled">Create Account</button>
             <p>Already have an account? <span id="login">Log in</span></p>
         </div>
     </div>
